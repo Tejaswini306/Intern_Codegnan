@@ -1,0 +1,14 @@
+Firebase Deployment:
+
+npm install firebase-tools -g
+firebase login
+firebase init
+firebase deploy
+
+Redux:
+
+Action which is going to specify the basic operation type and payload
+Reducer which carries logic or functionality of the action
+Store works like a database
+Dispatch works as a mediator between actions and reducers
+

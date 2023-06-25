@@ -1,0 +1,19 @@
+API
+    Application Programming Interface for communicating with backend
+
+response from an API
+    JSON -- Javascript Object Notation
+    {
+        "key":value;
+        "key":value;
+        "key":value
+    }
+
+AJAX calls or rest calls(CRUD)
+
+get             retrieve
+post            create
+put             update
+delete          delete
+patch           combinition of post and put
+fetch or axios

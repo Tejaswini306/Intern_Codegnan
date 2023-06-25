@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg{
+            background-image: url("https://www.wallpaperflare.com/static/930/175/684/circles-highlights-background-form-wallpaper.jpg");
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+          }
+        label {
+            display: block;
+            margin-top: 10px;
+          }
+        .boxes {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 4px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          }
+      
+        input[type="submit"]:hover {
+            background-color: #45a049;
+          }
+    </style>
+    <script>
+        function check(){
+            var name=document.getElementById("name").value
+            var email=document.getElementById("email").value
+            var password=document.getElementById("password").value
+            var phone=document.getElementById("phone").value
+            var nameCheck=/^[a-zA-Z]+$/
+            var emailcheck=/^[a-z0-9]+@[a-zA-Z]+\.[a-z]{2,3}$/
+            var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            var phoneRegex = /^\d{10}$/;
+            console.log(name)
+            if(name==""|| name.length<3){
+                alert("please enter your name")
+                return false
+            }
+            if(!name.match(nameCheck)){
+                alert("name must be only characters")
+                return false
+            }
+            if(!email.match(emailcheck)){
+                alert("Provide proper email id")
+                return false
+            }
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one numeric digit");
+                return false;
+              }
+            if (!phoneRegex.test(phone)) {
+                alert("Phone number should be a 10-digit number");
+                return false;
+              }
+            return true
+        }
+    </script>
+</head>
+<body class="bg">
+    <center><h1>Forms</h1></center>>
+    <form name="myForm" onsubmit="return check()">
+        <label for="name">Name:</label>
+        <input class="boxes" type="text" id="name" name="name" required>
+        <br>
+        
+        <label for="email">Email:</label>
+        <input class="boxes"id="email" name="email" required>
+        <br>
+        
+        <label for="password">Password:</label>
+        <input class="boxes"id="password" name="password" required>
+        <br>
+        
+        <label for="dob">Date of Birth:</label>
+        <input class="boxes"type="date" id="dob" name="dob" required>
+        <br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required/>Male
+        <br>
+        <!--<label for="male">Male</label>-->
+        <input type="radio" id="female" name="gender" value="female"/>Female
+        <!--<label for="female">Female</label>-->
+        <br>
+
+        <label for="phone">Phone No.:</label>
+        <input class="boxes"id="phone" name="phone" required>
+        <br>
+        
+        <label for="state">State:</label>
+        <select class="boxes"id="state" name="state" required>
+            <option value="">Select State</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chattisgarh">Bihar</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+    

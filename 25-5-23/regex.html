@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            var firstname=document.getElementById("firstname").value
+            var email=document.getElementById("email").value
+            var password=document.getElementById("password").value
+            var firstnameCheck=/^[a-zA-Z]+$/
+            var emailcheck=/^[a-z0-9]+@[a-zA-Z]+\.[a-z]{2,3}$/
+            var passwordCheck=/^[a-zA-Z0-9_]$/
+            console.log(firstname)
+            if(firstname==""|| firstname.length<3){
+                alert("please enter your name")
+                return false
+            }
+            if(!firstname.match(firstnameCheck)){
+                alert("name must be only characters")
+                return false
+            }
+            if(!email.match(emailcheck)){
+                alert("Provide proper email id")
+                return false
+            }
+            if(password==""|| password.length<6){
+                alert("Password is weak. Length must be more than 6")
+                return false
+            }
+            return true
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return check()">
+        <input id="firstname"/>
+        <br/><br/>
+        <!--<button>Submit</button>-->
+        <input id="email"/>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
+
+<!--
+    name
+    email
+    password
+    confirm password
+    gender(radiobtn)
+    state(dropdown)
+-->

@@ -1,0 +1,6 @@
+[submodule "17-5-23"]
+	path = 17-5-23
+	url = https://github.com/username/MERN/17-5-23.git
+[submodule "MERN"]
+	path = MERN
+	url = https://github.com/Tejaswini306/MERN.git

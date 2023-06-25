@@ -1,0 +1,25 @@
+html
+!DOCTYPE html
+meta name=viewport
+content="width=device-width,initial-scale=1"
+
+CSS
+@media(screen width)
+{
+    selector{
+        properties:value;
+    }
+}
+
+in case of tablet,
+max-width:992px atleast
+min width:768px atmost
+max-width:992px and min-width:768px
+
+max-width and min-width
+
+extra small 486px-576px
+small 576px-768px
+medium(tablet) 768px-992px
+large 992px-1200px,1366px
+extra large 1366px and above
